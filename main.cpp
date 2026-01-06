@@ -1,9 +1,12 @@
 #include <iostream>
 #include "Include/Train.hpp"
+#include "options.hpp"
 
 
-int main()
+int main(int argc, char *argv[])
 {
+	clap::parse(argc, argv);
+
 	Train myTrain("Express", 200.0, 0.02, 500.0, 300.0, "Station A", "Station B");
 	print("Train Name: ", myTrain.getName(), "\n");
 	print("Weight (tons): ", myTrain.getWeightTons(), "\n");

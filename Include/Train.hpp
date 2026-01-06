@@ -73,11 +73,4 @@ class Train
 
 };
 
-
-template<typename... Args>
-void print(Args&&... args)
-{
-    ((std::cout << args ), ...);
-}
-
 #endif // TRAIN_HPP

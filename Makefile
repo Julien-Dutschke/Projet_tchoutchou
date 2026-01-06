@@ -1,10 +1,11 @@
-CXX = g++
-CXXFLAGS = -std=c++20 -Wall -Wextra -Werror
+CXX ?= g++
+CXXFLAGS ?= -std=c++20 -Wall -Wextra -Werror -pedantic
 
 TARGET = Tchoutchou
 
 SRC = main.cpp \
       Source/Train.cpp
+SRC += options.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
