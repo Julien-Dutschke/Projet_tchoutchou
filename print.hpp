@@ -7,9 +7,11 @@
 // could be replaced by a noop if not on a unix system
 #include <unistd.h>
 
-namespace print {
+namespace print
+{
 
-	namespace raw {
+	namespace raw
+	{
 		template <typename... Args>
 		void print(std::ostream& out, Args&&... args)
 		{
