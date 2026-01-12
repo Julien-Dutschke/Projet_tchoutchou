@@ -103,7 +103,8 @@ namespace parser {
 		for (auto &train : ret.trains)
 			print::info(Yellow("\tname: "), w10, train.name, Yellow(" weight: "), w5, train.weight, Yellow(" friction: "), w5, train.friction,
 			Yellow(" acceleration: "), w5, train.maxAcceleration, Yellow(" brake: "), train.maxBreakForce,
-			Yellow(" departure: "), w10, train.departureNode, Yellow(" arrival: "), w10, train.arrivalNode, Yellow(" departure time: "), w5, train.departureTime, " stop duration: ", w5, train.stopDuration);
+			Yellow(" departure: "), w10, train.departureNode, Yellow(" arrival: "), w10, train.arrivalNode, Yellow(" departure time: "), w5, train.departureTime,
+			Yellow(" stop duration: "), w5, train.stopDuration);
 		return ret;
 	}
 }
