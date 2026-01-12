@@ -1,5 +1,4 @@
-#ifndef NODE_HPP
-#define NODE_HPP
+#pragma once
 
 #include <string>
 
@@ -13,5 +12,3 @@ class Node
 
 		const std::string& getName() const { return _name; }
 };
-
-#endif // NODE_HPP

@@ -6,6 +6,7 @@ TARGET = Tchoutchou
 SRC = main.cpp \
       Source/Train.cpp
 SRC += options.cpp
+SRC += Source/Parser.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

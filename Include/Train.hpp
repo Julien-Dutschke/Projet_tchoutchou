@@ -1,7 +1,6 @@
-#ifndef TRAIN_HPP
-# define TRAIN_HPP
+#pragma once
 
-# include <string>
+#include <string>
 
 enum class TrainState
 {
@@ -72,5 +71,3 @@ class Train
 
 
 };
-
-#endif // TRAIN_HPP

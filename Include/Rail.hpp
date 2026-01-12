@@ -1,8 +1,8 @@
 #ifndef RAIL_HPP
 #define RAIL_HPP
 
-# include <string>
-# include "node.hpp"
+#include <string>
+#include "Node.hpp"
 
 class Rail
 {
