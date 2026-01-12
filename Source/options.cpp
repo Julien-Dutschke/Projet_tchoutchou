@@ -11,6 +11,22 @@ namespace clap {
 	{
 		println("Usage: ", binary, " <arguments>");
 		println("\t-h | --help:\tThis message!");
+		println("");
+		println("Format of input data (arguments in '<>' blocks are mandatory):");
+		println("Nodes:");
+		println("\tNode <Node name>");
+		println("Rails:");
+		println("\tRail <Node 1> <Node 2> <Length (in km)> <Speed limit (in kmph)>");
+		println("Events:");
+		println("\tEvent <Event name> <Probability (from 0 to 1)> <Duration> <Affected node>");
+		println("Trains:");
+		println("\t<Train name> <weight> <Friction coefficient> <Max acceleration force (in KN)> <max break force (in KN)> <departure node> <arrivan node> <departure time> <stop time>");
+		println("");
+		println("times follow this format: <hour>h<minutes> (ex: 14h30, 00h20)");
+		println("rail connected nodes need to already exist, or to be declared in the same file.");
+		println("empty lines are ignored. everything after a '#' character is considered a comment, and is therefore deleted.");
+		println("whitespace at the beginning of a line will be ignored. inside lines, separation character is a space, and not a tab.");
+		println("names can be quoted with double quotes (\" character), and will be considered as one unique string.");
 		exit(0);
 	}
 

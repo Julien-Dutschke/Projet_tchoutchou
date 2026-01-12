@@ -1,6 +1,6 @@
 #include <fstream>
-#include "Include/Train.hpp"
-#include "Source/Parser.hpp"
+#include "Train.hpp"
+#include "Parser.hpp"
 #include "print.hpp"
 #include "options.hpp"
 

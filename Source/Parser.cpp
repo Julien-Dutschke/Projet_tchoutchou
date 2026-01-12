@@ -2,7 +2,7 @@
 #include <stdexcept>
 #include "Parser.hpp"
 #include "Toolbox.hpp"
-#include "../print.hpp"
+#include "print.hpp"
 
 namespace parser {
 
