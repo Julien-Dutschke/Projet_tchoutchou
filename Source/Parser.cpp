@@ -85,20 +85,25 @@ namespace parser {
 		auto w5 = std::setw(5);
 		auto w10 = std::setw(10);
 		auto w30 = std::setw(30);
-		
-		print::info("Nodes:");
+
+		auto Green = [](auto ... args) { return print::Colour(print::green, args...); };
+		auto Yellow = [](auto ... args) { return print::Colour(print::yellow, args...); };
+		print::info(Green("Nodes:"));
 		for (auto &node : ret.nodes)
-			print::info("\tname: ", w10, node.name);
-		print::info("Rails:");
+			print::info(Yellow("\tname: "), w10, node.name);
+		print::info(Green("Rails:"));
 		for (auto &rail : ret.rails)
-			print::info("\tnode 1: ", w10, rail.node1, " node 2: ", w10, rail.node2, " length: ", w5, rail.length, " max speed: ", w5, rail.speedLimit);
-		print::info("Events:");
+			print::info(Yellow("\tnode 1: "), w10, rail.node1, Yellow(" node 2: "), w10, rail.node2, Yellow(" length: "), w5, rail.length,
+			Yellow(" max speed: "), w5, rail.speedLimit);
+		print::info(Green("Events:"));
 		for (auto &event : ret.events)
-			print::info("\tname: ", w30, event.name, " probability: ", w5, event.probability, " affected node: ", w10, event.affectedNode, " duration: ", w5, event.duration);
-		print::info("Trains:");
+			print::info(Yellow("\tname: "), w30, event.name, Yellow(" probability: "), w5, event.probability,
+			Yellow(" affected node: "), w10, event.affectedNode, Yellow(" duration: "), w5, event.duration);
+		print::info(Green("Trains:"));
 		for (auto &train : ret.trains)
-			print::info("\tname: ", w10, train.name, " weight: ", w5, train.weight, " friction: ", w5, train.friction, " acceleration: ", w5, train.maxAcceleration, " brake: ", train.maxBreakForce,
-				" departure: ", w10, train.departureNode, " arrival: ", w10, train.arrivalNode, " departure time: ", w5, train.departureTime, " stop duration: ", w5, train.stopDuration);
+			print::info(Yellow("\tname: "), w10, train.name, Yellow(" weight: "), w5, train.weight, Yellow(" friction: "), w5, train.friction,
+			Yellow(" acceleration: "), w5, train.maxAcceleration, Yellow(" brake: "), train.maxBreakForce,
+			Yellow(" departure: "), w10, train.departureNode, Yellow(" arrival: "), w10, train.arrivalNode, Yellow(" departure time: "), w5, train.departureTime, " stop duration: ", w5, train.stopDuration);
 		return ret;
 	}
 }
