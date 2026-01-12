@@ -1,0 +1,14 @@
+import CXXFLAGS
+import LFLAGS
+import CXX
+
+CXXFLAGS += @(CXXFLAGS)
+CXXFLAGS += -Wall -Wextra -pedantic
+CXXFLAGS += -std=c++20
+CXXFLAGS += -I$(TUP_CWD)/Include
+LFLAGS += @(LFLAGS)
+
+.gitignore
+
+!cxx = |> ^j %o^ $(CXX) $(CXXFLAGS) -c %f -o %o |> %B.o
+!lxx = |> ^j %o^ $(CXX) $(LFLAGS) %f -o %o |>
