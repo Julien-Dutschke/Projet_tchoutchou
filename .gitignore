@@ -1,5 +1,6 @@
 *.o
 .cache
+build-*
 compile_commands.json
 vgcore.*
 Tchoutchou
