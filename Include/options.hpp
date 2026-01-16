@@ -1,5 +1,11 @@
 #pragma once
+#include <string_view>
+#include <vector>
 
 namespace clap {
-	void parse(int argc, char *argv[]);
+	struct Options {
+		std::vector<std::string_view> inputs;
+	};
+
+	Options parse(int argc, char *argv[]);
 }
