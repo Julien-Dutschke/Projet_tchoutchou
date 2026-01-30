@@ -48,3 +48,4 @@ S'il n'y a pas de variant d'actif, alors il sera placé a la racine du projet.
 - make s'en fiche de l'existence de tup.
 - si le makefile change et que des fichiers sont renommés, des .o zombies resteront dans le projet
 - Pour nettoyer tup, supprimer juste les dossiers build-*. s'il n'y a pas de variant actif, soit utiliser git (git clean -fdx), soit créer les variants, et supprimer leurs dossiers.
+🚂
